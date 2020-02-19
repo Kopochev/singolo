@@ -23,7 +23,7 @@ a{
 .header::after{
     position: absolute;
     content: "";
-    height: 5px;
+    height: 6px;
     width: 100%;
     background-color: #323746;
     bottom: 0;
@@ -38,6 +38,7 @@ a{
     font-weight:  700;
     color: #fff;
     text-align: left;
+    
 }
 .logo span{
     color: #f06c64;
@@ -49,7 +50,7 @@ a{
     font-size: 12px;
     line-height: 6px;
     color: #3b3f4e;
-    font-family: "Lato";
+    text-transform: uppercase;
     font-weight: 700;
     text-align: left;
     margin-bottom: 7px;
@@ -93,8 +94,78 @@ a{
     color: #e93e35;
 }
 .slider{
+    display: flex;
+    justify-content: space-between;
     min-height: 600px;
+    max-height: 600px;
     background-color: #f06c64;
     margin: 0 90px;
+    position: relative;
+}
+.slider::after{
+    position: absolute;
+    content: "";
+    height: 6px;
+    width: 100%;
+    background-color: #ea676b;
+    bottom: 0;
+}
+.prev{
+    background-image: url("assets/img/arrow.png");
+    background-repeat: no-repeat;
+    margin-left: 42px;
+    width: 20px;
+    height: 30px;
+    margin-top: 281px;
+    opacity: 0.5;
+    cursor: pointer;
+    transition: linear;
+    transition-duration: 0.25s;
+}
+.prev:hover{
+    opacity: 1;
+}
+.prev:active{
+    background-position:  left center;
+    background-size: 80%;
+}
+
+
+.next{
+    background-image: url("assets/img/arrow.png");
+    background-repeat: no-repeat;
+    margin-right: 38px;
+    width: 20px;
+    height: 30px;
+    margin-top: 281px;
+    opacity: 0.5;
+    cursor: pointer;
+    transform: rotate(180deg);
+    transition: linear;
+    transition-duration: 0.25s;
+    background-position: bottom;
+}
+.next:hover{
+    opacity: 1;
+
+}
+.next:active{
+    background-position:  left center;
+    background-size: 80%;
+}
+.content_images{
+    margin: 0 auto;
+    max-width: 1020px;
+    min-width: 800px;
+    max-height: 600px; 
+    display: block;
+
+}
+ .vertical{
+    margin-top: 53px;
+}
+ .horizontal{
+     margin-left: 69px;
+     margin-bottom: 122px;
 }
 
