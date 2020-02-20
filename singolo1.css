@@ -1,7 +1,10 @@
-body{
-    font-family: 'Lato', sans-serif;
+*{
     margin: 0;
     padding: 0;
+}
+body{
+    font-family: 'Lato', sans-serif;
+
 }
 a{
     text-decoration: none;
@@ -31,6 +34,7 @@ a{
 .logo{
     margin-bottom: 3px;
     margin-left: 40px;
+    cursor: default;
 }
 .logo h1{
     font-size: 24px;
@@ -53,7 +57,7 @@ a{
     text-transform: uppercase;
     font-weight: 700;
     text-align: left;
-    margin-bottom: 7px;
+    margin-top: 2px;
     margin-right: 38px;
     max-width: 400px;
 
@@ -168,4 +172,84 @@ a{
      margin-left: 69px;
      margin-bottom: 122px;
 }
+.services{
+    min-height: 500px;
+    background-color: #f2f2f2;
+    margin: 0 90px;
+    position: relative;
+    color: #767e9e;
+}
+.services::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 6px;
+    bottom: 0;
+    background-color: #fff;
+}
+.services_info{
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 300;
+    min-width: 940px;
+    margin: 0 41px;
+    color: #767e9e;
+}
+
+.services_info p{
+    height: 57px;
+    margin: 11px 0 0 0;
+    font-size: 17.5px;
+    font-weight: 300;
+    line-height: 30px;
+    color: #767e9e;
+    text-align: justify;
+}
+.services_info h2{
+    letter-spacing: -0.09px;
+    font-size: 30px;
+    line-height: 18px;
+    font-weight: 900;
+    color: #666d89;
+    margin: 0;
+    padding-top: 68px;
+    margin-bottom: 29px;
+}
+
+.features{
+    display: flex;
+    justify-content: space-between;
+    margin: 46px 40px 0 40px;
+    flex-wrap: wrap;
+}
+.features_item{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 300px;
+    margin-bottom: 30px;
+    margin-right: 1px;
+    
+}
+.features_item img{
+    margin-top: 1px;
+    margin-right: 16px;
+}
+.features_item_text h3{
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: 900;
+    margin-bottom: 12px;
+    margin-left: 3px;
+    color: #666d89;
+}
+.features_item_text p{
+    
+    font-size: 11.8px;
+    line-height: 21px;
+    font-weight: 400;
+    text-align: justify;
+    margin-left: 3px;
+}
+
 
