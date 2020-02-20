@@ -231,7 +231,9 @@ a{
     margin-right: 1px;
     
 }
-.features_item img{
+.features_item_img{
+    width: 60px;
+    height: 60px;
     margin-top: 1px;
     margin-right: 16px;
 }
@@ -252,4 +254,7 @@ a{
     margin-left: 3px;
 }
 
-
+.features_item:nth-child(3) .features_item_text,
+.features_item:nth-child(6) .features_item_text{
+    margin-left: 3px;
+}
