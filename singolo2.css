@@ -194,6 +194,7 @@ body{
     color: #666d89;
     font-weight: 900;
     margin-bottom: 11px;
+    overflow: hidden;
 }
 .employee__title {
     width: 300px;
