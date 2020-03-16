@@ -97,10 +97,10 @@ a{
     color: #e93e35;
 }
 .slider{
- 
+
     background-color: #f06c64;
     border-bottom: 6px solid #ea676b;
-    /* margin: 0 90px; */
+    transition: linear 0.5s;
 
 }
 .blue-bg{
@@ -112,6 +112,7 @@ a{
     justify-content: space-between;
     min-height: 594px;
     max-height: 594px;
+    overflow: hidden;
 }
 
 .slider__prev-btn{
@@ -165,7 +166,9 @@ a{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    transition: linear 0.5s;
 }
+
 .content-images.one-image{
     justify-content: center;
 }
@@ -742,6 +745,9 @@ a{
     text-align: center;
     color:#e7ecff;
     margin: 0 45% ;
+}
+.message__btn-ok:hover {
+    background-color: #74383a;
 }
 #project-result{
     height: 60px;
