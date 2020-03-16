@@ -11,18 +11,18 @@
 </head>
 
 <body>
-    <header class="header">
+    <header class="header" id="home">
         <div class="wrapper header__wrapper">
             <div class="logo">
                 <h1>SINGOLO<span>*</span></h1>
             </div>
             <nav class="header__nav">
                 <ul class="menu">
-                    <li><a class="menu__item_active menu__item_first" href="#">HOME</a></li>
-                    <li><a href="#">SERVICES</a></li>
-                    <li><a href="#">PORTFOLIO</a></li>
-                    <li><a href="#">ABOUT</a></li>
-                    <li><a href="#">CONTACT</a></li>
+                    <li><a class="menu__item_active menu__item_first" href="#home">HOME</a></li>
+                    <li><a href="#services">SERVICES</a></li>
+                    <li><a href="#portfolio">PORTFOLIO</a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
                 </ul>
             </nav>
         </div>
@@ -31,15 +31,28 @@
     <section class="slider">
         <div class="wrapper slider__wrapper">
             <div class="slider__prev-btn"></div>
-            <div class="content-images">
-                <img class="content-images__vertical" src="assets/img/iPhoneVertical.png" alt="phoneVertical">
-                <img class="content-images__horizontal" src="assets/img/iPhoneHorizontal.png" alt="phoneHorizontal">
+            <div class="content-images ">
+                <div class="image-container-vertical">
+                    <img class="content-images__vertical " src="assets/img/iPhoneVertical.png" alt="phoneVertical">
+                    <div class="virtual-phone-vertical">
+                        <div class="black-screen-vertical hidden"></div>
+                    </div>
+                </div>
+                <div class="image-container-horizontal">
+                    <img class="content-images__horizontal" src="assets/img/iPhoneHorizontal.png" alt="phoneHorizontal">
+                    <div class="virtual-phone-horizontal">
+                        <div class="black-screen-horizontal hidden"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="content-images one-image hidden">
+                <img class="content-images__vertical " src="assets/img/Slide-2.png" alt="phoneVertical">
             </div>
             <div class="slider__next-btn"></div>
         </div>
     </section>
 
-    <section class="services">
+    <section class="services" id="services">
         <div class="wrapper services__wrapper">
             <div class="services__info">
                 <h2>Our Services</h2>
@@ -116,7 +129,7 @@
             </div>
         </div>
     </section>
-    <section class="portfolio">
+    <section class="portfolio" id="portfolio">
         <div class="wrapper">
             <div class="inner">
                 <h2 class="portfolio__title">Portfolio</h2>
@@ -125,31 +138,35 @@
                     odio sem nec elit.</p>
                 <div class="portfolio__tags">
                     <span class="tag tag_selected">All</span>
-                    <span class="tag tag_bordered">Web Design</span>
-                    <span class="tag tag_bordered">Graphic Design</span>
-                    <span class="tag tag_bordered">Artwork</span>
+                    <span class="tag">Web Design</span>
+                    <span class="tag">Graphic Design</span>
+                    <span class="tag">Artwork</span>
                 </div>
-                <div class="layout-4-column">
+                <div class="layout-4-column gallery-container-interactive">
                     <div class="gallery">
                         <div class="gallery__container">
                             <img class="gallery__image gallery__image_boat" src="./assets/img/gallery/1.jpg" alt="boat">
                         </div>
                         <div class="gallery__container">
-                            <img class="gallery__image gallery__image_animals" src="./assets/img/gallery/5.jpg" alt="animals">
+                            <img class="gallery__image gallery__image_animals" src="./assets/img/gallery/5.jpg"
+                                alt="animals">
                         </div>
                         <div class="gallery__container">
-                            <img class="gallery__image gallery__image_monster-green" src="./assets/img/gallery/9.jpg" alt="monster green">
+                            <img class="gallery__image gallery__image_monster-green" src="./assets/img/gallery/9.jpg"
+                                alt="monster green">
                         </div>
                     </div>
                     <div class="gallery">
                         <div class="gallery__container">
-                            <img class="gallery__image gallery__image_droplet" src="./assets/img/gallery/2.jpg" alt="droplet">
+                            <img class="gallery__image gallery__image_droplet" src="./assets/img/gallery/2.jpg"
+                                alt="droplet">
                         </div>
                         <div class="gallery__container">
                             <img class="gallery__image gallery__image_SDK" src="./assets/img/gallery/6.jpg" alt="SDK">
                         </div>
                         <div class="gallery__container">
-                            <img class="gallery__image gallery__image_letters" src="./assets/img/gallery/10.jpg" alt="letters">
+                            <img class="gallery__image gallery__image_letters" src="./assets/img/gallery/10.jpg"
+                                alt="letters">
                         </div>
                     </div>
                     <div class="gallery">
@@ -157,82 +174,92 @@
                             <img class="gallery__image gallery__image_city" src="./assets/img/gallery/3.jpg" alt="city">
                         </div>
                         <div class="gallery__container">
-                            <img class="gallery__image gallery__image_abstract" src="./assets/img/gallery/7.jpg" alt="abstract">
+                            <img class="gallery__image gallery__image_abstract" src="./assets/img/gallery/7.jpg"
+                                alt="abstract">
                         </div>
                         <div class="gallery__container">
-                            <img class="gallery__image gallery__image_monster-white" src="./assets/img/gallery/11.jpg" alt="monster white">
+                            <img class="gallery__image gallery__image_monster-white" src="./assets/img/gallery/11.jpg"
+                                alt="monster white">
                         </div>
                     </div>
                     <div class="gallery">
                         <div class="gallery__container">
-                            <img class="gallery__image gallery__image_robot" src="./assets/img/gallery/4.jpg" alt="robot">
+                            <img class="gallery__image gallery__image_robot" src="./assets/img/gallery/4.jpg"
+                                alt="robot">
                         </div>
                         <div class="gallery__container">
-                            <img class="gallery__image gallery__image_chicken" src="./assets/img/gallery/8.jpg" alt="chicken">
+                            <img class="gallery__image gallery__image_chicken" src="./assets/img/gallery/8.jpg"
+                                alt="chicken">
                         </div>
                         <div class="gallery__container">
-                            <img class="gallery__image gallery__image_envelope" src="./assets/img/gallery/12.jpg" alt="envelope">
+                            <img class="gallery__image gallery__image_envelope" src="./assets/img/gallery/12.jpg"
+                                alt="envelope">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <section class="about-us">
+    <section class="about-us" id="about">
         <div class="wrapper">
             <div class="inner">
-            <h2 class="about-us__title">About Us</h2>
-            <p class="about-us__description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis
-                mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus,
-                tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-            <div class="layout-3-column">
-                <div class="employee">
-                    <img class="employee__image" src="./assets/img/employee/jensen.jpg" alt="Adam Jensen">
-                    <div class="employee__content">
-                        <h3 class="employee__name">Adam Jensen</h3>
-                        <p class="employee__title">Quisque luctus, quam eget molestie commodo, lacus purus cursus purus,
-                            nec rutrum tellus dolor id lorem.</p>
+                <h2 class="about-us__title">About Us</h2>
+                <p class="about-us__description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum.
+                    Duis
+                    mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce
+                    dapibus,
+                    tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+                <div class="layout-3-column">
+                    <div class="employee">
+                        <img class="employee__image" src="./assets/img/employee/jensen.jpg" alt="Adam Jensen">
+                        <div class="employee__content">
+                            <h3 class="employee__name">Adam Jensen</h3>
+                            <p class="employee__title">Quisque luctus, quam eget molestie commodo, lacus purus cursus
+                                purus,
+                                nec rutrum tellus dolor id lorem.</p>
+                        </div>
+                        <div class="employee__social-links">
+                            <a class="facebook" href="https://www.facebook.com/"></a>
+                            <a class="google" href="https://www.google.com/"></a>
+                            <a class="twitter" href="https://twitter.com/"></a>
+                            <a class="linkedin" href="https://linkedin.com/"></a>
+                        </div>
                     </div>
-                    <div class="employee__social-links">
-                        <a class="facebook" href="https://www.facebook.com/"></a>
-                        <a class="google" href="https://www.google.com/"></a>
-                        <a class="twitter" href="https://twitter.com/"></a>
-                        <a class="linkedin" href="https://linkedin.com/"></a>
+                    <div class="employee">
+                        <img class="employee__image" src="./assets/img/employee/miles.jpg" alt="Desmond Miles">
+                        <div class="employee__content">
+                            <h3 class="employee__name">Desmond Miles</h3>
+                            <p class="employee__title">Curabitur vestibulum eget mauris quis laoreet. Phasellus<br> in
+                                quam
+                                laoreet, viverra lacus ut, ultrices velit.</p>
+                        </div>
+                        <div class="employee__social-links">
+                            <a class="facebook" href="https://www.facebook.com/"></a>
+                            <a class="google" href="https://www.google.com/"></a>
+                            <a class="twitter" href="https://twitter.com/"></a>
+                            <a class="linkedin" href="https://linkedin.com/"></a>
+                        </div>
+                    </div>
+                    <div class="employee">
+                        <img class="employee__image" src="./assets/img/employee/visari.jpg" alt="Scolara Visari">
+                        <div class="employee__content">
+                            <h3 class="employee__name">Scolara Visari</h3>
+                            <p class="employee__title">Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet
+                                turpis, et
+                                consequat felis. Quisque condimentum..</p>
+                        </div>
+                        <div class="employee__social-links">
+                            <a class="facebook" href="https://www.facebook.com/"></a>
+                            <a class="google" href="https://www.google.com/"></a>
+                            <a class="twitter" href="https://twitter.com/"></a>
+                            <a class="linkedin" href="https://linkedin.com/"></a>
+                        </div>
                     </div>
                 </div>
-                <div class="employee">
-                    <img class="employee__image" src="./assets/img/employee/miles.jpg" alt="Desmond Miles">
-                    <div class="employee__content">
-                        <h3 class="employee__name">Desmond Miles</h3>
-                        <p class="employee__title">Curabitur vestibulum eget mauris quis laoreet. Phasellus<br> in quam
-                            laoreet, viverra lacus ut, ultrices velit.</p>
-                    </div>
-                    <div class="employee__social-links">
-                        <a class="facebook" href="https://www.facebook.com/"></a>
-                        <a class="google" href="https://www.google.com/"></a>
-                        <a class="twitter" href="https://twitter.com/"></a>
-                        <a class="linkedin" href="https://linkedin.com/"></a>
-                    </div>
-                </div>
-                <div class="employee">
-                    <img class="employee__image" src="./assets/img/employee/visari.jpg" alt="Scolara Visari">
-                    <div class="employee__content">
-                        <h3 class="employee__name">Scolara Visari</h3>
-                        <p class="employee__title">Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et
-                            consequat felis. Quisque condimentum..</p>
-                    </div>
-                    <div class="employee__social-links">
-                        <a class="facebook" href="https://www.facebook.com/"></a>
-                        <a class="google" href="https://www.google.com/"></a>
-                        <a class="twitter" href="https://twitter.com/"></a>
-                        <a class="linkedin" href="https://linkedin.com/"></a>
-                    </div>
-                </div>
-            </div>
             </div>
         </div>
     </section>
-    <section class="contact-us">
+    <section class="contact-us" id="contact">
         <div class="wrapper">
             <div class="inner">
                 <h2 class="contact-us__title">Get a Quote</h2>
@@ -241,13 +268,13 @@
                     dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
                 <div class="layout-2-column">
                     <div class="contact-us__form">
-                        <form action="#" method="post">
+                        <form action="#" method="post" id="send-form">
                             <input type="text" name="name" placeholder="Name (Required)" required>
                             <input type="email" name="email" placeholder="Email (Required)" required>
-                            <input type="text" name="subject" placeholder="Subject">
-                            <textarea name="project" cols="30" rows="10"
+                            <input type="text" name="subject" placeholder="Subject" id="subject-id">
+                            <textarea name="project" id="project-description" cols="30" rows="10"
                                 placeholder="Describe your project in detail..."></textarea>
-                            <button type="submit" class="button">Send</button>
+                            <button type="submit" class="button" >Send</button>
                         </form>
                     </div>
                     <div class="contact-us-info">
@@ -274,7 +301,16 @@
                 </div>
             </div>
         </div>
+        <section class="form-modal hidden">
+            <div class="message">
+                <p class="message__title">Письмо отправлено</p>
+                <p id="subject-result"></p>
+                <p id="project-result"></p>
+                <span class="message__btn-ok" id="close-btn">Ok</span>
+            </div>
+        </section>
     </section>
+
     <footer class="footer">
         <div class="wrapper">
                 <div class="layout-2-column">
@@ -288,7 +324,11 @@
                         <a class="linkedin" href="https://linkedin.com/"></a>
                     </div>
                 </div>
+
+            </div>
         </div>
     </footer>
+    <script src="./script.js"></script>
 </body>
+
 </html>
