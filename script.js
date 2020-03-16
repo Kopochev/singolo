@@ -1,8 +1,8 @@
 const NAV = document.querySelector('.menu');
 const TAGS = document.querySelector('.portfolio__tags');
 const GALLERY = document.querySelector('.gallery-container-interactive');
-const PHONE_VERTICAL = document.querySelector('.image-container-vertical');
-const PHONE_HORIZONTAL = document.querySelector('.image-container-horizontal');
+const PHONE_VERTICAL = document.querySelector('.virtual-phone-vertical');
+const PHONE_HORIZONTAL = document.querySelector('.virtual-phone-horizontal');
 const arrSourceImage = [['gallery__image_boat', './assets/img/gallery/1.jpg'], ['gallery__image_droplet', './assets/img/gallery/2.jpg'], ['gallery__image_city', './assets/img/gallery/3.jpg'], ['gallery__image_robot', './assets/img/gallery/4.jpg'], ['gallery__image_animals', './assets/img/gallery/5.jpg'], ['gallery__image_SDK', './assets/img/gallery/6.jpg'], ['gallery__image_abstract', './assets/img/gallery/7.jpg'], ['gallery__image_chicken', './assets/img/gallery/8.jpg'], ['gallery__image_monster-green', './assets/img/gallery/9.jpg'], ['gallery__image_letters', './assets/img/gallery/10.jpg'], ['gallery__image_monster-white', './assets/img/gallery/11.jpg'], ['gallery__image_envelope', './assets/img/gallery/12.jpg']];
 
 window.onload = function (){
@@ -71,9 +71,36 @@ const OPEN_BUTTON = document.getElementById('send-form');
 const CLOSE_BUTTON = document.getElementById('close-btn');
  OPEN_BUTTON.addEventListener('submit', (event) => {
     event.preventDefault();
+    const subject = document.getElementById('subject-id').value;
+    document.getElementById('subject-result').innerText = 'Без темы';
+    if(subject !== ''){
+        document.getElementById('subject-result').innerText = `Тема: ${subject}`;
+    }
+    const project = document.getElementById('project-description').value;
+    document.getElementById('project-result').innerText = 'Без описания';
+    if(project !== ''){
+        document.getElementById('project-result').innerText = `Описание: ${project}`;
+    }
     document.querySelector('.form-modal').classList.remove('hidden');
     
  });
  CLOSE_BUTTON.addEventListener('click', (event) => {
+    document.getElementById('subject-result').innerText = 'Без темы';
+    document.getElementById('subject-id').value = '';
+    document.getElementById('project-result').innerText = 'Без описания';
+    document.getElementById('project-description').value = '';
     document.querySelector('.form-modal').classList.add('hidden');
  });
+
+function toggleSlide(button, slide, classHidden){
+    document.querySelector(button).addEventListener('click', () => {
+        document.querySelectorAll(slide).forEach(element =>{
+            element.classList.toggle(classHidden);
+        });
+        document.querySelector('.slider').classList.toggle('blue-bg');
+     });
+}
+toggleSlide('.slider__next-btn','.content-images', 'hidden');
+toggleSlide('.slider__prev-btn','.content-images', 'hidden');
+ 
+

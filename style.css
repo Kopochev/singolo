@@ -103,8 +103,12 @@ a{
     /* margin: 0 90px; */
 
 }
+.blue-bg{
+    background-color: #648bf0;
+    border-bottom: 6px solid #4d75da;
+}
 .slider__wrapper{
-   display: flex;
+    display: flex;
     justify-content: space-between;
     min-height: 594px;
     max-height: 594px;
@@ -161,7 +165,9 @@ a{
     display: flex;
     align-items: center;
     justify-content: space-between;
-
+}
+.content-images.one-image{
+    justify-content: center;
 }
 .black-screen-vertical{
     position: absolute;
@@ -170,6 +176,22 @@ a{
     background-color: #000000;
     top: 65px;
     left: 14px;
+}
+.virtual-phone-horizontal{
+    position: absolute;
+    border-radius: 26px;
+    width: 458px;
+    height: 216px;
+    top: 0;
+    left: 0;
+}
+.virtual-phone-vertical{
+    position: absolute;
+    border-radius: 26px;
+    width: 216px;
+    height: 458px;
+    top: 0;
+    left: 0;
 }
 .black-screen-horizontal{
     position: absolute;
@@ -694,13 +716,38 @@ a{
 }
 
 .message p{
-    width: 300px;
-    margin: 0 auto;
+    max-width: 300px;
+    word-wrap: break-word;
+    max-height: 60px;
+    margin: 0 auto 10px;
+    overflow: hidden;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+
+.message__title {
+    padding-top: 10px;
     text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 10px;
 }
-.message button{
-    margin: 0 45%;
+.message__btn-ok {
+    cursor: pointer;
+    user-select: none; 
+    padding: 5px 10px;
+    background-color: #b87274; 
+    border-radius: 5px;
+    text-align: center;
+    color:#e7ecff;
+    margin: 0 45% ;
 }
+#project-result{
+    height: 60px;
+    margin-bottom: 20px;
+}
+
 .ico_map {
     background-image: url("./assets/img/icons/ico_location.png");
     background-repeat: no-repeat;
@@ -754,3 +801,4 @@ a{
 .footer__social-links a:nth-child(3){
     margin-right: 3px;
 }
+
