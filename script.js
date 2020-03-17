@@ -6,6 +6,9 @@ const PHONE_HORIZONTAL = document.querySelector('.virtual-phone-horizontal');
 const OPEN_BUTTON = document.getElementById('send-form');
 const CLOSE_BUTTON = document.getElementById('close-btn');
 const arrSourceImage = [['gallery__image_boat', './assets/img/gallery/1.jpg'], ['gallery__image_droplet', './assets/img/gallery/2.jpg'], ['gallery__image_city', './assets/img/gallery/3.jpg'], ['gallery__image_robot', './assets/img/gallery/4.jpg'], ['gallery__image_animals', './assets/img/gallery/5.jpg'], ['gallery__image_SDK', './assets/img/gallery/6.jpg'], ['gallery__image_abstract', './assets/img/gallery/7.jpg'], ['gallery__image_chicken', './assets/img/gallery/8.jpg'], ['gallery__image_monster-green', './assets/img/gallery/9.jpg'], ['gallery__image_letters', './assets/img/gallery/10.jpg'], ['gallery__image_monster-white', './assets/img/gallery/11.jpg'], ['gallery__image_envelope', './assets/img/gallery/12.jpg']];
+const items = document.querySelectorAll('.content-image__container');
+let currentItem = 0;
+let isEnabled = true;
 
 window.onload = function (){
     //add click event for menu
@@ -47,9 +50,21 @@ window.onload = function (){
         e.target.closest('.gallery__container').classList.add('gallery__container_bordered');
     });
 
-    //slider
-    toggleSlide('.slider__next-btn','.content-images', 'hidden');
-    toggleSlide('.slider__prev-btn','.content-images', 'hidden');
+    //toggle Background
+    toggleBackground('.slider__next-btn');
+    toggleBackground('.slider__prev-btn');
+    // slider
+    document.querySelector('.slider__prev-btn').addEventListener('click', function() {
+        if (isEnabled) {
+            previousItem(currentItem);
+        }
+    });
+    
+    document.querySelector('.slider__next-btn').addEventListener('click', function() {
+        if (isEnabled) {
+            nextItem(currentItem);
+        }
+    });
     // form nodal
     OPEN_BUTTON.addEventListener('submit', (event) => {
         event.preventDefault();
@@ -97,14 +112,47 @@ function shuffle(arr) {
     return arr;
 }
 
-function toggleSlide(button, slide, classHidden){
+function toggleBackground(button){
     document.querySelector(button).addEventListener('click', () => {
-        document.querySelectorAll(slide).forEach(element =>{
-            element.classList.toggle(classHidden);
-        });
         document.querySelector('.slider').classList.toggle('blue-bg');
      });
 }
+
+
+//slider
+function changeCurrentItem(n) {
+	currentItem = (n + items.length) % items.length;
+}
+
+function hideItem(direction) {
+	isEnabled = false;
+	items[currentItem].classList.add(direction);
+	items[currentItem].addEventListener('animationend', function() {
+		this.classList.remove('active-slide', direction);
+	});
+}
+
+function showItem(direction) {
+	items[currentItem].classList.add('next-slide', direction);
+	items[currentItem].addEventListener('animationend', function() {
+		this.classList.remove('next-slide', direction);
+		this.classList.add('active-slide');
+		isEnabled = true;
+	});
+}
+
+function nextItem(n) {
+	hideItem('to-left');
+	changeCurrentItem(n + 1);
+	showItem('from-right');
+}
+
+function previousItem(n) {
+	hideItem('to-right');
+	changeCurrentItem(n - 1);
+	showItem('from-left');
+}
+
 
 
 
